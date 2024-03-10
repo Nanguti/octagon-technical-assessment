@@ -80,8 +80,12 @@ Fingerprint data is securely handled and stored. Fingerprint data is securely ha
 
 ## Screenshots
 
-![Login Form](/screenshots/login-form.png)
 ![Registration Form](/screenshots/registration-form.png)
+![Login Form](/screenshots/login-form.png)
+![Login Using Email](/screenshots/login-form-email.png)
+![Login Using Fingerprint](/screenshots/login-form-fingerprint.png)
+![Forgot Password ](/screenshots/forgot-password.png)
+![Dashboard ](/screenshots/dashboard.png)
 
 ## Credits
 

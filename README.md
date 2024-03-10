@@ -74,9 +74,9 @@ This project aims to create a web application using Laravel that allows users to
 
 ## Additional Notes
 
-    For simulation purposes, during registration and fingerprint capture, a user enters a random number or characters (assuming that it is fingerprint data which will always be unique) that they are able to remember. If a real scanning device were available, data from the scanning device would be captured and stored in the database.
+For simulation purposes, during registration and fingerprint capture, a user enters a random number or characters (assuming that it is fingerprint data which will always be unique) that they are able to remember. If a real scanning device were available, data from the scanning device would be captured and stored in the database.
 
-    Fingerprint data is securely handled and stored. Fingerprint data is securely handled by Laravel's built-in `Hash::make()` method.
+Fingerprint data is securely handled and stored. Fingerprint data is securely handled by Laravel's built-in `Hash::make()` method.
 
 ## Credits
 

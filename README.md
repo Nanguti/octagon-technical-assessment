@@ -65,15 +65,18 @@ This project aims to create a web application using Laravel that allows users to
     - Submit the registration form.
 
 2. **User Login**:
-    - Navigate to the login page.
+    - Navigate to http://localhost:8000; this will either take you to the dashboard or the login page if not logged in.
+    - On the login page, select the desired authentication method.
     - Enter your email and password OR provide fingerprint data.
-    - Select the desired authentication method.
     - Click the login button.
+    - If you do not have an account, there is a registration link available.
+    - For forgotten passwords, we provide a password reset link.
 
 ## Additional Notes
 
-    -   For simulation purposes, during registration and fingerprint capture, a user enters a random number or characters (assuming that it is fingerprint data which will always be unique) that they are able to remember. If a real scanning device were available, data from the scanning device would be captured and stored in the database.
-    -   Fingerprint data is securely handled and stored. Fingerprint data is securely handled by Laravel's built-in `Hash::make()` method.
+    For simulation purposes, during registration and fingerprint capture, a user enters a random number or characters (assuming that it is fingerprint data which will always be unique) that they are able to remember. If a real scanning device were available, data from the scanning device would be captured and stored in the database.
+
+    Fingerprint data is securely handled and stored. Fingerprint data is securely handled by Laravel's built-in `Hash::make()` method.
 
 ## Credits
 

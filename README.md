@@ -78,6 +78,11 @@ For simulation purposes, during registration and fingerprint capture, a user ent
 
 Fingerprint data is securely handled and stored. Fingerprint data is securely handled by Laravel's built-in `Hash::make()` method.
 
+## Screenshots
+
+![Login Form](/assets/img/screenshots/login-form.png)
+![Registration Form](/assets/img/screenshots/registration-form.png)
+
 ## Credits
 
 This project was developed by Kevin Wanyonyi for the purpose of a technical assessment.

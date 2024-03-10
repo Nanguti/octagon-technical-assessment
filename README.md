@@ -4,10 +4,13 @@
 
 This project aims to create a web application using Laravel that allows users to register by providing basic details such as name, email, password, and fingerprint data. Subsequently, users can log in using either their email/password combination or fingerprint authentication. The fingerprint data is securely stored and validated during the login process.
 
+This project uses Laravel Breeze, a minimalistic yet comprehensive authentication solution provided by Laravel. Laravel Breeze simplifies the implementation of authentication functionalities by providing features such as login, registration, password reset, email verification, and password confirmation out of the box. Additionally, it includes a user-friendly "profile" page where users can update their name, email address, and password with ease.
+
+The default view layer of Laravel Breeze is composed of simple Blade templates styled with Tailwind CSS, ensuring a clean and modern user interface.
+
 ## Requirements
 
 -   PHP >= 8.1
--   Laravel Breeze ^1.29
 -   Laravel Framework ^10.10
 
 ## Features
@@ -59,7 +62,7 @@ This project aims to create a web application using Laravel that allows users to
 
 1. **User Registration**:
 
-    - Navigate to the registration page.
+    - Navigate to http://localhost:8000 and click on registration link.
     - Fill in the required details (name, email, password).
     - Enter a random number or characters as fingerprint data (assuming uniqueness).
     - Submit the registration form.

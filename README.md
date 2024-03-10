@@ -1,5 +1,9 @@
 # Laravel Fingerprint Authentication
 
+## Live Project
+
+Check out the live project: [Project Link](https://octagon.jv.co.ke/)
+
 ## Overview
 
 This project aims to create a web application using Laravel that allows users to register by providing basic details such as name, email, password, and fingerprint data. Subsequently, users can log in using either their email/password combination or fingerprint authentication. The fingerprint data is securely stored and validated during the login process.

@@ -71,6 +71,8 @@ This project aims to create a web application using Laravel that allows users to
     - Click the login button.
     - If you do not have an account, there is a registration link available.
     - For forgotten passwords, we provide a password reset link.
+    - After successful authentication, the session is regenerated to prevent session fixation attacks.
+    - On logout, the session data is invalidated, and the CSRF token is regenerated to prevent CSRF attacks.
 
 ## Additional Notes
 

@@ -30,23 +30,37 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $request->validate([
+        $validatedData = $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'fingerprint' => 'required|string|max:255', 
         ]);
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'fingerprint_hash' => Hash::make($request->fingerprint)
-        ]);
 
-        event(new Registered($user));
+        try {
 
-        Auth::login($user);
-
-        return redirect(RouteServiceProvider::HOME);
+            $user = $this->createUser($validatedData);
+            event(new Registered($user));
+            $this->loginUser($user);
+            return redirect(RouteServiceProvider::HOME);
+            
+        } catch (\Exception $e) {
+            return back()->withInput()->withErrors(['error' => 'User registration failed. Please try again.']);
+        }
     }
-}
+
+    protected function createUser(array $validatedData): User
+    {
+        return User::create([
+            'name' => $validatedData['name'],
+            'email' => $validatedData['email'],
+            'password' => Hash::make($validatedData['password']),
+            'fingerprint_hash' => Hash::make($validatedData['fingerprint'])
+        ]);
+    }
+
+    protected function loginUser(User $user): void
+    {
+        Auth::login($user);
+    }
+} 

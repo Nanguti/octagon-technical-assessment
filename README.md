@@ -8,6 +8,8 @@ Check out the live link: [Live Link](https://octagon.jv.co.ke/)
 
 This project aims to create a web application using Laravel that allows users to register by providing basic details such as name, email, password, and fingerprint data. Subsequently, users can log in using either their email/password combination or fingerprint authentication. The fingerprint data is securely stored and validated during the login process.
 
+For simulation purposes, during registration and fingerprint capture, users enter a number or character sequence to represent fingerprint data. This assumes that real fingerprints are unique. Fingerprint data, when collected, it is securely handled and stored using Laravel's built-in Hash::make() method for encryption.
+
 This project uses Laravel Breeze, a minimalistic yet comprehensive authentication solution provided by Laravel. Laravel Breeze simplifies the implementation of authentication functionalities by providing features such as login, registration, password reset, email verification, and password confirmation out of the box. Additionally, it includes a user-friendly "profile" page where users can update their name, email address, and password with ease.
 
 The default view layer of Laravel Breeze is composed of simple Blade templates styled with Tailwind CSS, ensuring a clean and modern user interface.
@@ -80,12 +82,6 @@ The default view layer of Laravel Breeze is composed of simple Blade templates s
     - For forgotten passwords, we provide a password reset link.
     - After successful authentication, the session is regenerated to prevent session fixation attacks.
     - On logout, the session data is invalidated, and the CSRF token is regenerated to prevent CSRF attacks.
-
-## Additional Notes
-
-For simulation purposes, during registration and fingerprint capture, a user enters a random number or characters (assuming that it is fingerprint data which will always be unique) that they are able to remember. If a real scanning device were available, data from the scanning device would be captured and stored in the database.
-
-Fingerprint data is securely handled and stored. Fingerprint data is securely handled by Laravel's built-in `Hash::make()` method.
 
 ## Screenshots
 

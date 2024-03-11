@@ -1,8 +1,8 @@
 # Laravel Fingerprint Authentication
 
-## Live Project
+## Live Link
 
-Check out the live project: [Project Link](https://octagon.jv.co.ke/)
+Check out the live link: [Live Link](https://octagon.jv.co.ke/)
 
 ## Overview
 

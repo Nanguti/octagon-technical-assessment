@@ -55,7 +55,10 @@ class LoginRequest extends FormRequest
             $users = User::all(); 
             $authenticatedUser = null;
 
+            // fingerprint_hash column is indexed in the database to speed up the lookup process and improve overall perfomance especially with a large number of users
+
             foreach ($users as $user) {
+                // Check if the fingerprint matches
                 if (Hash::check($this->fingerprint, $user->fingerprint_hash)) {
                     $authenticatedUser = $user;
                     break;

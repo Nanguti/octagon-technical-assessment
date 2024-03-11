@@ -40,7 +40,10 @@ class RegisteredUserController extends Controller
         try {
 
             $user = $this->createUser($validatedData);
+            // Dispatch the Registered event
             event(new Registered($user));
+            
+            // Log in the newly registered user
             $this->loginUser($user);
             return redirect(RouteServiceProvider::HOME);
             
@@ -49,6 +52,9 @@ class RegisteredUserController extends Controller
         }
     }
 
+    /**
+     * Create a new user record.
+     */
     protected function createUser(array $validatedData): User
     {
         return User::create([
@@ -59,6 +65,9 @@ class RegisteredUserController extends Controller
         ]);
     }
 
+    /**
+     * Log in the specified user.
+     */
     protected function loginUser(User $user): void
     {
         Auth::login($user);
